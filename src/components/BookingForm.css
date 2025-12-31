@@ -1,0 +1,357 @@
+.booking-section {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  min-height: calc(100vh - 200px);
+}
+
+.booking-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.booking-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--primary-green, #495E57);
+  font-family: 'Markazi Text', serif;
+}
+
+form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.form-group label span {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+/* Input wrapper for icons */
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 0.75rem;
+  color: #999;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 2.75rem;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease;
+  min-height: var(--touch-target-min, 44px);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--secondary-yellow, #F4CE14);
+  box-shadow: 0 0 0 3px rgba(244, 206, 20, 0.2);
+  transform: translateY(-1px);
+}
+
+.form-input.error {
+  border-color: #d32f2f;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 100px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--secondary-yellow, #F4CE14);
+  box-shadow: 0 0 0 3px rgba(244, 206, 20, 0.2);
+}
+
+.error-message {
+  color: #d32f2f;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: var(--primary-green, #495E57);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+  min-height: var(--touch-target-min, 44px);
+}
+
+.submit-button:hover:not(.disabled),
+.submit-button:focus:not(.disabled) {
+  background-color: #3d4d47;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(73, 94, 87, 0.3);
+  outline: 2px solid var(--secondary-yellow, #F4CE14);
+  outline-offset: 2px;
+}
+
+.submit-button:active:not(.disabled) {
+  transform: scale(0.98);
+}
+
+.submit-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #ccc;
+}
+
+/* Confirmation Page Styles */
+.confirmation-page {
+  background-color: white;
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.success-animation {
+  margin-bottom: 2rem;
+}
+
+.checkmark-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #4caf50;
+  animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.checkmark {
+  color: white;
+  animation: checkmark-draw 0.5s ease 0.2s both;
+}
+
+@keyframes checkmark-draw {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+  100% {
+    stroke-dasharray: 100 0;
+  }
+}
+
+.confirmation-title {
+  color: var(--primary-green, #495E57);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-family: 'Markazi Text', serif;
+}
+
+.confirmation-message {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.reservation-summary-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem 0;
+  text-align: left;
+  border: 2px solid var(--primary-green, #495E57);
+}
+
+.reservation-summary-card h3 {
+  color: var(--primary-green, #495E57);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-family: 'Markazi Text', serif;
+  font-size: 1.5rem;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.summary-row:last-child {
+  border-bottom: none;
+}
+
+.summary-label {
+  font-weight: 600;
+  color: #666;
+}
+
+.summary-value {
+  font-weight: 500;
+  color: #333;
+  text-align: right;
+}
+
+.confirmation-id {
+  font-family: monospace;
+  font-size: 1.1rem;
+  color: var(--primary-green, #495E57);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.confirmation-actions {
+  margin: 2rem 0;
+}
+
+.calendar-cta-button {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  background-color: var(--secondary-yellow, #F4CE14);
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  min-height: var(--touch-target-min, 44px);
+  line-height: 1.5;
+}
+
+.calendar-cta-button:hover {
+  background-color: #e6b800;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(244, 206, 20, 0.3);
+}
+
+.calendar-cta-button:active {
+  transform: scale(0.98);
+}
+
+.confirmation-footer {
+  color: #666;
+  font-size: 0.95rem;
+  margin-top: 2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .booking-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .booking-section h2 {
+    font-size: 2rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  form {
+    padding: 1.5rem;
+  }
+
+  .confirmation-page {
+    padding: 2rem 1.5rem;
+  }
+
+  .reservation-summary-card {
+    padding: 1.5rem;
+  }
+
+  .summary-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .summary-value {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-section {
+    padding: 2rem 1rem;
+  }
+
+  form {
+    padding: 1rem;
+  }
+
+  .confirmation-page {
+    padding: 1.5rem 1rem;
+  }
+
+  .checkmark-container {
+    width: 80px;
+    height: 80px;
+  }
+
+  .checkmark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .confirmation-title {
+    font-size: 1.5rem;
+  }
+}

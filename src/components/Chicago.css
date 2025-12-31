@@ -1,0 +1,109 @@
+.chicago-section {
+  padding: 4rem 2rem;
+  background-color: white;
+}
+
+.chicago-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.chicago-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.chicago-text h2 {
+  font-size: 3rem;
+  color: var(--primary-green, #495E57);
+  margin-bottom: 0.5rem;
+  font-family: 'Markazi Text', serif;
+}
+
+.chicago-subtitle {
+  font-size: 2rem;
+  color: var(--primary-green, #495E57);
+  margin-bottom: 1.5rem;
+  font-family: 'Markazi Text', serif;
+}
+
+.chicago-description {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.chicago-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  position: relative;
+}
+
+.chicago-image-wrapper {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.chicago-image-wrapper:first-child {
+  transform: translateY(-2rem);
+}
+
+.chicago-image-wrapper:last-child {
+  transform: translateY(2rem);
+}
+
+.chicago-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.chicago-image-wrapper:hover .chicago-image {
+  transform: scale(1.05);
+}
+
+/* Responsive design */
+@media (max-width: 968px) {
+  .chicago-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .chicago-images {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .chicago-image-wrapper:first-child,
+  .chicago-image-wrapper:last-child {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .chicago-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .chicago-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .chicago-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .chicago-description {
+    font-size: 1rem;
+  }
+}
+

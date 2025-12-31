@@ -1,0 +1,142 @@
+.menu-section {
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+
+.menu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.menu-section h2 {
+  font-size: 2.5rem;
+  color: var(--primary-green, #495E57);
+  margin: 0;
+  font-family: 'Markazi Text', serif;
+}
+
+.order-online-button {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  background-color: var(--secondary-yellow, #F4CE14);
+  color: #333;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  border: 2px solid var(--secondary-yellow, #F4CE14);
+  min-height: var(--touch-target-min, 44px);
+  line-height: 1.5;
+}
+
+.order-online-button:hover,
+.order-online-button:focus {
+  background-color: #e6b800;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(244, 206, 20, 0.3);
+  outline: 2px solid var(--primary-green, #495E57);
+  outline-offset: 2px;
+}
+
+.order-online-button:active {
+  transform: scale(0.98);
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .menu-grid {
+    overflow-x: visible;
+  }
+}
+
+.menu-item {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+  min-width: 250px;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item-image {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, #edefee 0%, #d4d4d4 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  border-bottom: 2px solid #ddd;
+  overflow: hidden;
+}
+
+.menu-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu-item-content {
+  padding: 1.5rem;
+}
+
+.menu-item h3 {
+  color: var(--primary-green, #495E57);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Markazi Text', serif;
+}
+
+.menu-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-family: 'Karla', sans-serif;
+}
+
+.menu-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--secondary-yellow, #F4CE14);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .menu-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .menu-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+

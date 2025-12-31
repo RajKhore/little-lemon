@@ -1,0 +1,143 @@
+footer {
+  background-color: #333;
+  color: white;
+  padding: 3rem 2rem 1rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+  color: #f4b400;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-section h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #f4b400;
+}
+
+.footer-section p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.footer-section address {
+  font-style: normal;
+}
+
+.footer-section address a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section address a:hover,
+.footer-section address a:focus {
+  color: #f4b400;
+  outline: 2px solid #f4b400;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.footer-section dl {
+  margin: 0;
+}
+
+.footer-section dt {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  color: #fff;
+}
+
+.footer-section dd {
+  margin-left: 0;
+  margin-bottom: 0.5rem;
+  color: #ccc;
+}
+
+.footer-logo h3 {
+  margin-bottom: 0.5rem;
+}
+
+.footer-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-nav a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus {
+  color: #f4b400;
+  outline: 2px solid #f4b400;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-links li {
+  margin-bottom: 0.5rem;
+}
+
+.social-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+  color: #f4b400;
+  outline: 2px solid #f4b400;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #555;
+  padding-top: 1rem;
+  text-align: center;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  footer {
+    padding: 2rem 1.5rem 1rem;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .footer-section {
+    text-align: left;
+  }
+}
+

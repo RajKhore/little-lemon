@@ -1,0 +1,75 @@
+header {
+  background-color: var(--secondary-yellow, #F4CE14);
+  color: var(--primary-green, #495E57);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: 'Markazi Text', serif;
+  color: var(--primary-green, #495E57);
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+header nav a {
+  color: var(--primary-green, #495E57);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  min-height: var(--touch-target-min, 44px);
+  display: flex;
+  align-items: center;
+}
+
+header nav a:hover,
+header nav a:focus {
+  background-color: rgba(73, 94, 87, 0.1);
+  outline: 2px solid var(--primary-green, #495E57);
+  outline-offset: 2px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s ease;
+}
+
+.logo a:hover,
+.logo a:focus {
+  opacity: 0.8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .logo h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  header nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
